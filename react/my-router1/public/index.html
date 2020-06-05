@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- <script>
+      let root = document.getElementById('root')
+      window.onpushstate = function (state, title, url) {
+        console.log(url, 'url')
+        root.innerHTML = url
+      }
+      // 手动改地址栏路径会触发pop事件
+      window.onpopstate = function (event) {
+        console.log('pop')
+      }
+      ;(function (history) {
+        let pushState = history.pushState
+        history.pushState = function (state, title, url) {
+          pushState.call(history, state, title, url)
+          if ((typeof window.onpushstate) === 'function') {
+            window.onpushstate(state, title, url)
+          }
+        }
+      })(window.history)
+      // window.history 这是浏览器原生提供的对象，用来让我们通过它来操作会话容器
+      setTimeout(() => {
+        // pushState 方法是不会触发事件的
+        window.history.pushState({page: 1}, 'page1', '/page1')
+      }, 1000)
+      setTimeout(() => {
+        // pushState 方法是不会触发事件的
+        window.history.pushState({page: 2}, 'page2', '/page2')
+      }, 2000)
+      setTimeout(() => {
+        // 会触发onpopstate事件
+        window.history.go(-1)
+      }, 3000)
+    </script> -->
+  </body>
+</html>
